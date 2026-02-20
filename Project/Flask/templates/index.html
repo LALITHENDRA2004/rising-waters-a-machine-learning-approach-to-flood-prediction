@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Analysis | FloodGuard AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header class="app-container">
+        <nav>
+            <a href="/"
+                style="text-decoration: none; font-size: 1.5rem; color: var(--primary); font-weight: 700;">FloodGuard
+                AI</a>
+        </nav>
+    </header>
+
+    <main class="app-container">
+        <div class="card">
+            <h2 style="margin-bottom: 2rem; color: var(--text-main);">Environmental Risk Assessment</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 0.875rem;">Please provide the following
+                environmental parameters for precise flood prediction.</p>
+
+            <form action="/data_predict" method="post" class="grid-form">
+                <div class="form-group">
+                    <label for="Temp">Temperature (°C)</label>
+                    <input type="number" step="any" id="Temp" name="Temp" placeholder="e.g. 28.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="Humidity">Humidity (%)</label>
+                    <input type="number" step="any" id="Humidity" name="Humidity" placeholder="e.g. 75" required>
+                </div>
+                <div class="form-group">
+                    <label for="CloudCover">Cloud Cover (%)</label>
+                    <input type="number" step="any" id="CloudCover" name="CloudCover" placeholder="e.g. 60" required>
+                </div>
+                <div class="form-group">
+                    <label for="ANNUAL">Annual Rainfall (mm)</label>
+                    <input type="number" step="any" id="ANNUAL" name="ANNUAL" placeholder="e.g. 1200" required>
+                </div>
+                <div class="form-group">
+                    <label for="JanFeb">Jan-Feb Rainfall (mm)</label>
+                    <input type="number" step="any" id="JanFeb" name="JanFeb" placeholder="e.g. 45" required>
+                </div>
+                <div class="form-group">
+                    <label for="MarMay">Mar-May Rainfall (mm)</label>
+                    <input type="number" step="any" id="MarMay" name="MarMay" placeholder="e.g. 150" required>
+                </div>
+                <div class="form-group">
+                    <label for="JunSep">Jun-Sep Rainfall (mm)</label>
+                    <input type="number" step="any" id="JunSep" name="JunSep" placeholder="e.g. 800" required>
+                </div>
+                <div class="form-group">
+                    <label for="OctDec">Oct-Dec Rainfall (mm)</label>
+                    <input type="number" step="any" id="OctDec" name="OctDec" placeholder="e.g. 200" required>
+                </div>
+                <div class="form-group">
+                    <label for="avgjune">Average June Rainfall (mm)</label>
+                    <input type="number" step="any" id="avgjune" name="avgjune" placeholder="e.g. 250" required>
+                </div>
+                <div class="form-group">
+                    <label for="sub">Region Coefficient (Sub)</label>
+                    <input type="number" step="any" id="sub" name="sub" placeholder="e.g. 1.2" required>
+                </div>
+
+                <div style="grid-column: 1 / -1; margin-top: 1rem;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Analyze Flood Risk</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="app-container"
+        style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.875rem;">
+        <p>Ensure all values are accurate for the best prediction results.</p>
+    </footer>
+</body>
+
+</html>

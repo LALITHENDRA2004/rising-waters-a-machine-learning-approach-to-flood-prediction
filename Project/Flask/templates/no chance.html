@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Risk | FloodGuard AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header class="app-container">
+        <nav>
+            <a href="/"
+                style="text-decoration: none; font-size: 1.5rem; color: var(--primary); font-weight: 700;">FloodGuard
+                AI</a>
+        </nav>
+    </header>
+
+    <main class="app-container">
+        <div class="card result-container">
+            <div class="result-icon">✅</div>
+            <h2 class="status-text safe">Low Flood Risk</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Current environmental indicators suggest a minimal
+                risk of severe flooding. The system predicts stable conditions based on the data provided.</p>
+
+            <div
+                style="background: #f0fdf4; border: 1px solid #dcfce7; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem; text-align: left;">
+                <h3 style="font-size: 1rem; color: #166534; margin-bottom: 0.5rem;">System Insights:</h3>
+                <p style="font-size: 0.875rem; color: #166534;">Environmental parameters are within historical safety
+                    thresholds. However, always remain vigilant during seasonal changes.</p>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="/predict" class="btn btn-primary">New Analysis</a>
+                <a href="/" class="btn" style="background: var(--background); color: var(--text-main);">Back to Home</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

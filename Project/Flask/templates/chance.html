@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Risk Warning | FloodGuard AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header class="app-container">
+        <nav>
+            <a href="/"
+                style="text-decoration: none; font-size: 1.5rem; color: var(--primary); font-weight: 700;">FloodGuard
+                AI</a>
+        </nav>
+    </header>
+
+    <main class="app-container">
+        <div class="card result-container">
+            <div class="result-icon">⚠️</div>
+            <h2 class="status-text chance">High Flood Risk Detected</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Based on the provided environmental parameters,
+                there is a significant probability of severe flooding in the specified region.</p>
+
+            <div
+                style="background: #fef2f2; border: 1px solid #fee2e2; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem; text-align: left;">
+                <h3 style="font-size: 1rem; color: #991b1b; margin-bottom: 0.5rem;">Recommended Actions:</h3>
+                <ul style="font-size: 0.875rem; color: #991b1b; padding-left: 1.25rem;">
+                    <li>Monitor local weather alerts continuously.</li>
+                    <li>Prepare an emergency evacuation kit.</li>
+                    <li>Review safety protocols with family members.</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="/predict" class="btn btn-primary">New Analysis</a>
+                <a href="/" class="btn" style="background: var(--background); color: var(--text-main);">Back to Home</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
