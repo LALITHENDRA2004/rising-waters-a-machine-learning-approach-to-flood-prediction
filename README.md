@@ -118,17 +118,18 @@ Flask/
 
 2. Navigate to the project folder:
 
-   - cd flood_prediction_system
+   - cd Project
 
 3. Install dependencies:
 
    - pip install -r requirements.txt
 
-4. Run Flask app:
-
+4. Navigate to the Flask directory and run the Flask app:
+   
+   - cd Flask
    - python app.py
 
-5. Open in browser:
+6. Open in browser:
 
    - http://127.0.0.1:5000
 
